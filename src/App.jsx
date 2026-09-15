@@ -2,7 +2,6 @@
 import Login from "./components/Login.jsx";
 import Registration from "./components/Registration.jsx";
 import "tailwindcss";
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Navbar from "./components/navbar.jsx";
@@ -12,9 +11,9 @@ import NewPw from "./components/NewPw.jsx";
 
 function App() {
   return (
-    <div className="app-shell">
+    <div className="App">
       <Navbar />
-      <div className="page-content">
+      <div className="pt-24">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
