@@ -35,7 +35,7 @@ function Login() {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch("https://authify-backend-z79f.onrender.com/api/auth/login", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)
