@@ -40,12 +40,12 @@ function Navbar() {
                     </div>
                 </div>
                 <div className="flex items-center gap-3 md:gap-4 pl-4 md:pl-6 border-l border-slate-300/50">
-                    {/* <a
+                    <a
                         href="/login"
                         className="px-5 py-2 text-sm font-semibold text-slate-700 hover:text-violet-600 transition duration-300"
                     >
-                        Login
-                    </a> */}
+                        Sign in
+                    </a>
                     <a
                         href="/registration"
                         className="px-4 py-2 md:px-5 text-sm font-semibold text-white bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 rounded-lg shadow-lg shadow-violet-500/30 hover:shadow-violet-600/50 transition duration-300 transform hover:scale-105"

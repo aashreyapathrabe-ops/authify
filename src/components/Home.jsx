@@ -1,37 +1,3 @@
-// import robotImage from '../assets/Robot.png';
-
-// function Home() {
-//     return (
-//         <>
-//             <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden pt-10 px-1">
-//                 <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-pink-50" />
-//                 <div className="absolute top-5 right-10 w-60 h-60 bg-gradient-to-r from-violet-200 to-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-//                 <div className="absolute -bottom-5 left-10 w-60 h-60 bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full mix-blend-multiply filter blur-4xl opacity-20 animate-blob" />
-
-//                 <main className="relative flex flex-col items-center justify-center flex-1 w-full max-w-1xl z-10">
-//                     <div className="mb-6 transform transition hover:scale-110 duration-300">
-//                         <div className="relative">
-//                             <img src={robotImage} alt="Robot" className="w-48 md:w-60 h-48 md:h-60 relative drop-shadow-2xl animate-spin-slow" />
-//                         </div>
-//                     </div>
-
-//                     <h2 className="text-4xl md:text-6xl font-extrabold text-center mb-6 md:mb-8 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-//                         Welcome User to Authify 👋
-//                     </h2>
-
-//                     <p className="text-base md:text-lg text-slate-600 text-center mb-8 max-w-md leading-relaxed px-4">
-//                         Secure authentication made simple. Sign up or log in to get started with our modern authentication platform.
-//                     </p>
-
-//                 </main>
-//             </div>
-//         </>
-//     );
-// }
-
-// export default Home;
-
-
 import robotImage from "../assets/Robot.png";
 import { useNavigate } from "react-router-dom";
 import {
@@ -47,127 +13,40 @@ function Home() {
 
   return (
     <div className="min-h-screen overflow-hidden bg-white text-slate-800">
-
-      {/* Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-
-        {/* Main gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-pink-50" />
-
-        {/* Decorative blobs */}
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-purple-200/40 rounded-full blur-3xl" />
-
         <div className="absolute top-1/2 -left-32 w-80 h-80 bg-pink-200/30 rounded-full blur-3xl" />
-
         <div className="absolute -bottom-32 right-1/3 w-72 h-72 bg-violet-200/30 rounded-full blur-3xl" />
-
       </div>
 
-      {/* Navbar */}
-      <nav className="relative z-20 max-w-7xl mx-auto px-6 md:px-10 py-5">
-
-        <div className="flex items-center justify-between">
-
-          {/* Logo */}
-          <div
-            onClick={() => navigate("/")}
-            className="flex items-center gap-2 cursor-pointer"
-          >
-
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-pink-500 flex items-center justify-center shadow-lg shadow-purple-200">
-              <FiShield className="text-white" size={21} />
-            </div>
-
-            <span className="text-2xl font-bold text-slate-800">
-              Auth<span className="text-violet-600">ify</span>
-            </span>
-
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-
-            <a
-              href="#features"
-              className="text-sm font-medium text-slate-600 hover:text-violet-600 transition"
-            >
-              Features
-            </a>
-
-            <a
-              href="#about"
-              className="text-sm font-medium text-slate-600 hover:text-violet-600 transition"
-            >
-              About
-            </a>
-
-            <button
-              onClick={() => navigate("/login")}
-              className="px-5 py-2.5 rounded-xl border border-violet-200 text-violet-600 font-medium hover:bg-violet-50 transition"
-            >
-              Login
-            </button>
-
-          </div>
-
-          {/* Mobile Login */}
-          <button
-            onClick={() => navigate("/login")}
-            className="md:hidden px-4 py-2 rounded-lg border border-violet-200 text-violet-600 text-sm font-medium"
-          >
-            Login
-          </button>
-
-        </div>
-
-      </nav>
-
-      {/* Hero */}
       <main className="relative z-10">
 
         <section className="max-w-7xl mx-auto min-h-[75vh] px-6 md:px-10 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
-
-          {/* Left Content */}
           <div className="flex-1 text-center md:text-left">
-
-            {/* Small badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 text-violet-600 text-sm font-medium mb-6">
-
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-
               Secure & Simple Authentication
-
             </div>
-
-            {/* Heading */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight">
-
               Welcome to
-
               <br />
-
               <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
                 Authify
               </span>
-
               <span className="ml-2">👋</span>
-
             </h1>
-
-            {/* Description */}
             <p className="mt-6 max-w-xl mx-auto md:mx-0 text-base md:text-lg text-slate-600 leading-relaxed">
-
               Secure authentication made simple. Create your account,
               sign in securely, and enjoy a smooth authentication experience
               with Authify.
-
             </p>
 
-            {/* Buttons */}
+
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-8">
 
               <button
-                onClick={() => navigate("/register")}
+                onClick={() => navigate("/registration")}
                 className="group flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-pink-500 text-white font-semibold shadow-lg shadow-purple-200 hover:shadow-xl hover:scale-105 transition duration-300"
               >
                 Get Started
@@ -209,18 +88,14 @@ function Home() {
 
           </div>
 
-          {/* Robot */}
           <div className="flex-1 flex justify-center">
 
             <div className="relative">
 
-              {/* Glow */}
               <div className="absolute inset-10 bg-purple-200/60 rounded-full blur-3xl" />
 
-              {/* Robot Card */}
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2.5rem] bg-white/80 backdrop-blur-sm border border-purple-100 shadow-2xl shadow-purple-100 flex items-center justify-center">
 
-                {/* Decorative circles */}
                 <div className="absolute top-6 right-7 w-12 h-12 rounded-full bg-pink-100" />
 
                 <div className="absolute bottom-7 left-7 w-8 h-8 rounded-full bg-violet-100" />
@@ -230,8 +105,6 @@ function Home() {
                   alt="Authify Robot"
                   className="relative w-56 md:w-72 drop-shadow-xl hover:scale-105 transition duration-500 animate-[float_4s_ease-in-out_infinite]"
                 />
-
-                {/* Floating card */}
                 <div className="absolute -left-6 top-12 flex items-center gap-3 px-4 py-3 rounded-2xl bg-white shadow-lg shadow-purple-100 border border-purple-50">
 
                   <div className="w-9 h-9 rounded-xl bg-green-50 flex items-center justify-center">
@@ -250,7 +123,7 @@ function Home() {
 
                 </div>
 
-                {/* Floating card */}
+        
                 <div className="absolute -right-6 bottom-12 flex items-center gap-3 px-4 py-3 rounded-2xl bg-white shadow-lg shadow-purple-100 border border-purple-50">
 
                   <div className="w-9 h-9 rounded-xl bg-violet-50 flex items-center justify-center">
@@ -405,10 +278,7 @@ function Home() {
           </p>
 
         </footer>
-
       </main>
-
-      {/* Floating animation */}
       <style>
         {`
           @keyframes float {
